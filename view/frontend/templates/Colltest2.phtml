@@ -1,0 +1,18 @@
+<?php
+$productCollection = $block->getProductCollection();
+foreach ($productCollection as $product) { ?>
+    <h1><?=$product->getName();?></h1>
+    <h5>id : <?=$product->getId();?></h5>
+    <?php
+    $image = 'product_page_main_image';
+
+    $imageUrl = $block->getImageUrl($product,$image);
+    $imageHeight = $block->getImageOriginalHeight($product,$image);
+    $imageWidth = $block->getImageOriginalWidth($product,$image);
+
+    ?>
+    <h4>Img-Url : <?php echo $imageUrl; ?></h4>
+    <h4>Img-Height : <?php echo $imageHeight; ?></h4>
+    <h4>Img-Width : <?php echo $imageWidth; ?></h4>
+    <?php echo('<hr>');
+}

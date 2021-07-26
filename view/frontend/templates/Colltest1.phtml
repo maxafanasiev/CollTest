@@ -1,0 +1,15 @@
+<?php
+$productCollection = $block->getProductCollection();
+foreach ($productCollection as $product) { ?>
+    <h1><?=$product->getName();?></h1>
+    <h5>id : <?=$product->getId();?></h5>
+    <?php
+    $productStockInfo = $block->getStockInformation($product->getId());
+    ?>
+    <h3>Quantity : <?php echo $productStockInfo->getQty();?></h3>
+    <h3>MinQty : <?php echo $productStockInfo->getMinQty($product->getId());?></h3>
+    <h3>MinSaleQty : <?php echo $productStockInfo->getMinSaleQty($product->getId());?></h3>
+    <h3>MaxSaleQty : <?php echo $productStockInfo->getMaxSaleQty($product->getId());?></h3>
+    <h3>IsInStock : <?php echo $productStockInfo->getIsInStock($product->getId());?></h3>
+    <?php echo('<hr>');
+}

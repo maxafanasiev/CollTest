@@ -1,0 +1,7 @@
+<?php
+$allCustomers = $block->getAllCustomers();
+foreach ($allCustomers as $customer) {
+    echo $customer->getEmail();
+    echo $customer->getFirstname();
+    echo $customer->getLastname();
+}

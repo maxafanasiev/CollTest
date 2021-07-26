@@ -1,0 +1,10 @@
+<?php
+
+$productCollection = $block->getProductCollection();
+foreach ($productCollection as $product) { ?>
+    <h2><?=$product->getName()?></h2>
+    <h3>Price : <?=$product->getPrice()?></h3>
+    <p>SKU : <?=$product->getSKU()?></p>
+<hr>
+<?php
+}
