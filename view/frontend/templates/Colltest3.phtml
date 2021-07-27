@@ -1,7 +1,5 @@
 <?php
-$allCustomers = $block->getAllCustomers();
+$allCustomers = $this->getAllCustomers();
 foreach ($allCustomers as $customer) {
-    echo $customer->getEmail();
-    echo $customer->getFirstname();
-    echo $customer->getLastname();
+    echo $customer->getId();
 }
