@@ -3,19 +3,20 @@ namespace Perspective\CollTest\Block;
 
 class CollTest3 extends \Magento\Framework\View\Element\Template
 {
-    protected $customerCollection;
+    protected $customerCollectionFactory;
 
     public function __construct(
-       \Magento\Customer\CustomerData\Customer $customerCollection
-    )
+       \Magento\Customer\Model\ResourceModel\Customer\CollectionFactory $customerCollectionFactory,
+       \Magento\Backend\Block\Template\Context $context,
+       array $data = [])
     {
-        $this->customerCollection = $customerCollection;
+        $this->customerCollectionFactory = $customerCollectionFactory;
     }
 
     public function getAllCustomers()
     {
-        return $this->customerCollection->create();
-
-
+        $collection = $this->customerCollectionFactory->create()->load();
+    return $collection;
     }
 }
+
