@@ -17,9 +17,9 @@ class CollTest7a extends Template
         parent::__construct($context, $data);
     }
 
-    public function getAllShippingMethods()
+    public function getActiveShippingMethods()
     {
-        return $this->shipConfig->getAllCarriers();
+        return $this->shipConfig->getActiveCarriers();
     }
 }
 

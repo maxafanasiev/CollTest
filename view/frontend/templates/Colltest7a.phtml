@@ -1,7 +1,7 @@
 <?php
-$methods = $block->getAllShippingMethods();
+$methods = $block->getActiveShippingMethods();
 ?>
-<h2>Shipping methods :</h2>
+<h2>Active Shipping methods :</h2>
 <hr>
 <ul>
     <?php foreach ($methods as $key => $method) {
