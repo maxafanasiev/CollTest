@@ -4,7 +4,7 @@ namespace Perspective\CollTest\Block;
 
 use Magento\Framework\View\Element\Template;
 
-class CollTest4 extends \Magento\Framework\View\Element\Template
+class CollTest5 extends \Magento\Framework\View\Element\Template
 {
     protected $orderCollectionFactory;
 

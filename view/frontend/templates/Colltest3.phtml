@@ -1,5 +1,7 @@
 <?php
 $allCustomers = $this->getAllCustomers();
-foreach ($allCustomers as $customer) {
-    print_r($customer->getData());
+foreach ($allCustomers as $customer) { ?>
+    <h4>Id : <?php echo $customer->getEntityId() ?></h4>
+    <h3>Name : <?php echo($customer->getFirstname()) ?> <?php echo($customer->getLastname()) ?></h3>
+    <h4>Customer Email : <?php echo $customer->getEmail() ?></h4> <?php
 }
