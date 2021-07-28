@@ -23,11 +23,14 @@ class CollTest extends \Magento\Framework\View\Element\Template
 
     public function getProductCollection()
     {
-        $categories = [23];
+        $categories = $this->getCategoryIds();
         $collection = $this->productCollectionFactory->create();
         $collection->addAttributeToSelect('*')->addCategoriesFilter(['in' => $categories])->addAttributeToFilter(ProductInterface::PRICE, ['lt' => 60]);
         return $collection;
     }
 
-
+    private function getCategoryIds()
+    {
+        return [23];
+    }
 }

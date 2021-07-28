@@ -1,0 +1,12 @@
+<?php
+$allOrders = $this->getAllOrders(1);
+foreach ($allOrders as $order) {
+    ?>
+
+    <h4>Entity Id : <?php echo($order->getEntityId())?></h4>
+    <h3>Name : <?php echo($order->getCustomerFirstname())?> <?php echo($order->getCustomerLastname())?></h3>
+    <h4>Customer Email : <?php echo $order->getCustomerEmail() ?></h4>
+    <h3> Status : <?php echo $order->getStatus()?></h3>
+    <h3> Grand Total : <?php echo $order->getGrandTotal()?> <?php echo $order->getBaseCurrencyCode()?></h3>
+    <h6>Created At : <?php echo $order->getCreatedAt()?></h6><hr>
+<?php }
