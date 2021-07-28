@@ -4,22 +4,22 @@ namespace Perspective\CollTest\Block;
 
 use Magento\Framework\View\Element\Template;
 
-class CollTest5 extends \Magento\Framework\View\Element\Template
+class CollTest5 extends Template
 {
-    protected $orderCollectionFactory;
+    protected $groupCollectionFactory;
 
     public function __construct(
-        \Magento\Sales\Model\ResourceModel\Order\CollectionFactory $orderCollectionFactory,
+        \Magento\Customer\Model\ResourceModel\Group\CollectionFactory $groupCollectionFactory,
         Template\Context $context,
         array $data = []
     ) {
-        $this->orderCollectionFactory = $orderCollectionFactory;
+        $this->groupCollectionFactory = $groupCollectionFactory;
         parent::__construct($context, $data);
     }
 
-    public function getAllOrders()
+    public function getAllGroups()
     {
-        return $this->orderCollectionFactory->create()->addFieldToFilter('customer_id', ['eq' => 1])->load();
+        return $this->groupCollectionFactory->create()->load();
     }
 }
 
