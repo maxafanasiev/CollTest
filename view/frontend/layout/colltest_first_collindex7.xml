@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:view/Layout/etc/page_configuration.xsd">
+<head>
+<title>Получение данных</title>
+</head>
+<referenceBlock name="page.main.title">
+<action method="setPageTitle">
+    <argument name="page_title" xsi:type="string">Получение данных (Задание 7) All shipping methods</argument>
+</action>
+</referenceBlock>
+<referenceContainer name="content">
+<block
+        name="colltest7"
+        class="Perspective\CollTest\Block\CollTest7"
+        template="Perspective_CollTest::Colltest7.phtml"
+/>
+</referenceContainer>
+        </page>

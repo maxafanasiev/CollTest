@@ -1,0 +1,10 @@
+<?php
+$methods = $block->getAllShippingMethods();
+?>
+<h2>Shipping methods :</h2>
+<hr>
+<ul>
+    <?php foreach ($methods as $key=>$method) {
+    ?> <li><h4><?php echo($method->getId())?></h4></li> <?php
+    } ?>
+</ul>
