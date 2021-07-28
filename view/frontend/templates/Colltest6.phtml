@@ -1,0 +1,8 @@
+<?php
+$methods = $block->getAllPaymentMethods();
+?>
+<ul>
+    <?php foreach ($methods as $key=>$method) {
+    ?> <li><?php echo $method ?></li> <?php
+    } ?>
+</ul>
