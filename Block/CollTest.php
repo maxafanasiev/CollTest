@@ -25,7 +25,9 @@ class CollTest extends \Magento\Framework\View\Element\Template
     {
         $categories = $this->getCategoryIds();
         $collection = $this->productCollectionFactory->create();
-        $collection->addAttributeToSelect('*')->addCategoriesFilter(['in' => $categories])->addAttributeToFilter(ProductInterface::PRICE, ['lt' => 60]);
+        $collection->addAttributeToSelect('*')->addCategoriesFilter(['in' => $categories])
+        ->addAttributeToFilter(ProductInterface::PRICE, ['lt' => 60])
+        ->addAttributeToFilter(ProductInterface::PRICE, ['gt' => 50]);
         return $collection;
     }
 
