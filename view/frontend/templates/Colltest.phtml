@@ -1,10 +1,12 @@
+<h4>Вывод товаров из категории Woman - Tops - Jackets, где Price меньше $60 и больше $50.
+    SKU, Name, Price.</h4>
 <?php
-
 $productCollection = $block->getProductCollection();
-foreach ($productCollection as $product) { ?>
-    <h2><?=$product->getName()?></h2>
-    <h3>Price : <?=$product->getPrice()?></h3>
-    <p>SKU : <?=$product->getSKU()?></p>
-<hr>
-<?php
+foreach ($productCollection as $product) {
+    ?>
+    <h2><?= $product->getName() ?></h2>
+    <h3>Price : <?= $product->getPrice() ?></h3>
+    <p>SKU : <?= $product->getSKU() ?></p>
+    <hr>
+    <?php
 }

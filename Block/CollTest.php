@@ -1,4 +1,5 @@
 <?php
+
 namespace Perspective\CollTest\Block;
 
 use Magento\Catalog\Api\Data\ProductInterface;
@@ -10,10 +11,10 @@ class CollTest extends \Magento\Framework\View\Element\Template
     protected $categoryFactory;
 
     public function __construct(
-        \Magento\Backend\Block\Template\Context $context,
+        \Magento\Backend\Block\Template\Context                        $context,
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory,
-        CategoryFactory $categoryFactory,
-        array $data = []
+        CategoryFactory                                                $categoryFactory,
+        array                                                          $data = []
     )
     {
         $this->productCollectionFactory = $productCollectionFactory;
@@ -26,8 +27,8 @@ class CollTest extends \Magento\Framework\View\Element\Template
         $categories = $this->getCategoryIds();
         $collection = $this->productCollectionFactory->create();
         $collection->addAttributeToSelect('*')->addCategoriesFilter(['in' => $categories])
-        ->addAttributeToFilter(ProductInterface::PRICE, ['lt' => 60])
-        ->addAttributeToFilter(ProductInterface::PRICE, ['gt' => 50]);
+            ->addAttributeToFilter(ProductInterface::PRICE, ['lt' => 60])
+            ->addAttributeToFilter(ProductInterface::PRICE, ['gt' => 50]);
         return $collection;
     }
 

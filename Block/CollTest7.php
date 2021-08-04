@@ -4,7 +4,7 @@ namespace Perspective\CollTest\Block;
 
 use Magento\Framework\View\Element\Template;
 
-class CollTest7a extends Template
+class CollTest7 extends Template
 {
     protected $shipConfig;
 

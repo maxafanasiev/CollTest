@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:view/Layout/etc/page_configuration.xsd">
-<head>
-<title>Получение данных</title>
-</head>
-<referenceBlock name="page.main.title">
-<action method="setPageTitle">
-    <argument name="page_title" xsi:type="string">Получение данных (Тестовое задание контрольное)</argument>
-</action>
-</referenceBlock>
-<referenceContainer name="content">
-<block
-        name="colltest"
-        class="Perspective\CollTest\Block\CollTest"
-        template="Perspective_CollTest::Colltest.phtml"
-/>
-</referenceContainer>
-        </page>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:view/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Получение данных</title>
+    </head>
+    <referenceBlock name="page.main.title">
+        <action method="setPageTitle">
+            <argument name="page_title" xsi:type="string">Получение данных (Тестовое задание контрольное)</argument>
+        </action>
+    </referenceBlock>
+    <referenceContainer name="content">
+        <block
+                name="colltest"
+                class="Perspective\CollTest\Block\CollTest"
+                template="Perspective_CollTest::Colltest.phtml"
+        />
+    </referenceContainer>
+</page>
