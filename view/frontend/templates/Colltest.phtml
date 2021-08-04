@@ -8,7 +8,7 @@ foreach ($productCollection as $product): ?>
     <div class="product-item-info"
          id="product-item-info_<?php $product->getId() ?>"
          data-container="product-grid">
-        <h1 class="page-title"><span class="base" data-ui-id="page-title-wrapper" itemprop="name"><?= $product->getName() ?></span></h1>
+        <h2 class="page-title"><span class="base" data-ui-id="page-title-wrapper" itemprop="name"><?= $product->getName() ?></span></h2>
         <h3 id="product-price-<?php $product->getId() ?>" class="price-wrapper"
             data-price-amount="<?php $product->getPrice() ?>">Цена : <?= $product->getPrice() ?></h3>
         <p class="value" itemprop="sku">Артикул : <?= $product->getSKU() ?></p>
